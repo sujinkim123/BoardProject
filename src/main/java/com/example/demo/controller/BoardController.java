@@ -36,8 +36,9 @@ public class BoardController {
 	}
 	
 	@GetMapping(value="/detail")
-	public ModelAndView boardDetail(Model model, @RequestParam int boardId) {
-		ModelAndView mv = new ModelAndView("");
+	public ModelAndView boardDetail(Model model, @RequestParam("boardId") int boardId) {
+		System.out.println("boardId ; "+ boardId);
+		ModelAndView mv = new ModelAndView("detail");
 		List<BoardVo> detailList = boardService.getBoardDetail(boardId);
 		model.addAttribute("detailList", detailList);
 		return mv;

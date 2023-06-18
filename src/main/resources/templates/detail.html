@@ -2,13 +2,73 @@
 <html xmlns xmlns:th="http://www.w3.org/1999/xhtml" : th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>게시글 상세 페이지</title>
+<title>게시판 상세화면</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+ <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+ <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+ <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+ <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+ <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 <body>
 
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/selectbox/js/selectUser.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+
+	<!-- ============ Header ============ -->
+	<header id="header" class="fixed-top">
+		<div class="continaer d-flex align-items-center justify-content-between">
+			<h1 class="logo"><a href="detail.html"></a></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index2.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+					<li><a class="nav-link scrollto active" href="#about">About</a></li>
+					<li class="dropdown"><a href="#"><span>카테고리</span><i class="bi bi-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">메뉴2</a></li>
+							<li><a href="#">메뉴3</a></li>
+							<li><a href="#">메뉴4</a></li>
+						</ul>
+					</li>
+					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+		</div>
+	</header>
+	<!-- ========== End Header ========== -->
+
+	<!-- ========== 게시글 상세보기 ========== -->
 	<div class="container">
 		<h2>게시글 상세 화면</h2>
-		<table class="board_detail">
+		<table class="tb tb_row">
 			<colgroup>
 				<col width="15%"/>
 				<col width="35%"/>
@@ -17,23 +77,23 @@
 			</colgroup>
 			<caption>게시글 상세내용</caption>
 			<tbody>
-				<tr>
+				<tr th:each="detailList : ${detailList}">
 					<th scope="row">글번호</th>
 					<td th:text="${detailList.boardId}"></td>
 				</tr>
-				<tr>
+				<tr th:each="detailList : ${detailList}">
 					<th scope="row">작성자</th>
 					<td th:text="${detailList.writer}"></td>
 					<th scope="row">작성일</th>
 					<td th:text="${#temporals.format(detailList.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				</tr>
-				<tr>
+				<tr th:each="detailList : ${detailList}">
 					<th scope="row">제목</th>
 					<td colspan="3">
 						<input type="text" id="title" name="title" th:value="${detailList.title}"/>
 					</td>
 				</tr>
-				<tr>
+				<tr th:each="detailList : ${detailList}">
 					<td colspan="4" class="view_text">
 						<textarea title="내용" id="contents" name="contents" th:text="${detailList.contents}">
 						</textarea>
@@ -42,6 +102,9 @@
 			</tbody>
 		</table>
 	</div>
-	
+	<!-- ========== 게시글 상세보기 ========== -->
+
+  	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 </body>
 </html>

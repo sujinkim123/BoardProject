@@ -77,20 +77,21 @@
 	
 	<!-- 게시판 list -->
 	<div>
+		<button onClick="location.href='post.html'">글쓰기</button>
 		<table class="table table-striped" id="dataTable" width="50px" cellspacing="50" style="text-align:center;">
 			<thead>
 				<tr>
 					<th>글번호</th>
 					<th>제목</th>
 					<th>작성자</th>
-					<th>등록일</th>
+					<th>작성일</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="boardList : ${boardList}">
 					<td th:text="${boardList.boardId}"></td>
 					<td> 
-						<a th:text="${boardList.title}" th:href="@{/detail(boardId=${boardList.boardId})}"></a></td>
+						<a th:text="${boardList.title}" th:href="@{/detail/(boardId=${boardList.boardId})}"></a></td>
 					<td th:text="${boardList.writer}"></td>
 					<td th:text="${#temporals.format(boardList.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				</tr>
