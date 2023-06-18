@@ -6,10 +6,25 @@
 </head>
 <body>
 	글 작성 페이지입니다.
-	<div class="container">
-		<h1>게시글 등록</h1>
-	</div>
-	<br>
-	
+	<table class="board_view">
+		<colgroup>
+		<col width="15%">
+		<col width="*"/>
+		</colgroup>
+		<caption>게시글 작성</caption>
+		<tbody>
+			<tr>
+				<th scope="row">제목</th>
+				<td><input type="text" id="title" name="title" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea rows="20" cols="100" title="내용" id="contents" name="contents"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="#this" class="btn" id="write">작성하기</a>
+	<a href="#this" class="btn" id="write">목록으로</a>
 </body>
 </html>

@@ -45,8 +45,9 @@ public class BoardController {
 	}
 
 	@PostMapping(value="post")
-	public void post(@RequestBody com.example.demo.model.dto.BoardDto postRequest) {
+	public void post(Model model, @RequestBody com.example.demo.model.dto.BoardDto postRequest) {
 		System.out.println("게시판 글 등록");
+		model.addAttribute("postRequest", postRequest);
 		boardService.post(postRequest);
 	}
 

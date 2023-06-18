@@ -72,12 +72,24 @@
 					<option>카테고리2</option>
 				</select>
 			</div>
+			
+			<div>
+				<select>
+					<option>제목</option>
+					<option>본문</option>
+					<option>작성자</option>
+				</select>
+				<label for="search-value" hidden>검색어</label>
+				<input id="search-value" type="search" placeholder="검색어...." name="search-value">
+				<button type="submit">검색</button>
+			</div>	
+			
 		</div>
 	</section>
 	
 	<!-- 게시판 list -->
 	<div>
-		<button onClick="location.href='post.html'">글쓰기</button>
+		<button onClick="location.href='post'">글쓰기</button>
 		<table class="table table-striped" id="dataTable" width="50px" cellspacing="50" style="text-align:center;">
 			<thead>
 				<tr>
