@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost:3306/mini_2023?serverTime=Asia/Seoul&autoReconnect=true&allowMultiQueries=true&characterEncoding=UTF-8
+    username: root
+    password: root1234*
+    mapper-locations: classpath:/mapper/**/*.xml

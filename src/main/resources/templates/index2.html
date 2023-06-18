@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>게시판 초기화면</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+ <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+ <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+ <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+ <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+ <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/selectbox/js/selectUser.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+
+	<!-- ============ Header ============ -->
+	<header id="header" class="fixed-top">
+		<div class="continaer d-flex align-items-center justify-content-between">
+			<h1 class="logo"><a href="index2.html"></a></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index2.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+					<li><a class="nav-link scrollto active" href="#about">About</a></li>
+					<li class="dropdown"><a href="#"><span>카테고리</span><i class="bi bi-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">메뉴2</a></li>
+							<li><a href="#">메뉴3</a></li>
+							<li><a href="#">메뉴4</a></li>
+						</ul>
+					</li>
+					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+		</div>
+	</header>
+	<!-- ========== End Header ========== -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero">
+		<div class="hero-container">
+			<h3> <strong>Klim 크림솔루션</strong></h3>
+			<h1>Mini Project</h1>
+			<h2>작성자 김수진</h2>
+
+			<!-- select box -->
+			<form>
+			<select>
+				<option name="userType" value="N">일반 사용자</option>
+				<option name="userType" value="Y">관리자</option>
+			</select>
+			<select name="selectOption2" onchange="get_option2(userType.value, selectOption2.value)">
+				<option value="option2">--select option2--</option>
+			</select>
+			</form>
+			<br>
+			<!-- select box -->
+
+			<a href="#" class="btn-get-started scrollto">Get Started</a><br>
+			<a href="#about" class="btn-get-started scrollto">About</a> <!-- about 변경 예정 -->
+		</div>
+	</section>
+	<!-- ======= End Hero Section ======= -->
+
+	<main id="main">
+
+	<!-- ========= About Section ========= -->
+	<section id="about" class="about">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>About</h2>
+				<h3>Learn More <span>About us</span></h3>
+				<p>paragraph1</p>
+			</div>
+
+			<div class="row content">
+				<div class="col-lg-6">
+					<p>paragraph2</p>
+				</div>
+				<ul>
+					<li>노는게 제일 좋아!노는게 제일 좋아!노는게 제일 좋아!노는게 제일 좋아!노는게 제일 좋아!</li>
+					<li>친구들 모여라!친구들 모여라!친구들 모여라!친구들 모여라!친구들 모여라!친구들 모여라!친구들 모여라!</li>
+					<li>언제나 즐거워언제나 즐거워언제나 즐거워언제나 즐거워언제나 즐거워언제나 즐거워언제나 즐거워언제나 즐거워</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-6 pt-4 pt-lg-0">
+				<p>꼬마펭귄나가신다꼬마펭귄나가신다꼬마펭귄나가신다꼬마펭귄나가신다꼬마펭귄나가신다꼬마펭귄나가신다</p>
+				<a href="#" class="btn-learn-more">꼬마펭귄꼬마펭귄꼬마펭귄</a>
+			</div>
+		</div>
+	</section>
+	<!-- ========= End About Section ========= -->
+
+	</main><!-- End Main -->
+
+	<!-- ========= Footer Section ========= -->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+				<div class="col-lg-3 col-md-6 footer-contact">
+					<h3>푸터제목1</h3>
+					<p>
+						푸터1푸터1푸터1푸터1<br>
+						푸터2푸터2푸터2푸터2<br>
+						푸터3푸터3푸터3푸터3<br><br>
+						<strong>아이엠스토롱베이비1</strong>
+						<strong>아이엠스트롱베이비2</strong>
+					</p>
+				</div>
+
+				<div clas="col-lg-2 col-md-6 footer-links">
+					<h4>푸터제목2</h4>
+					<ul>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터2Home</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터2AboutUs</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터2Services</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터2TermsOfService</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터2PrivacyPolicy</a></li>
+					</ul>
+				</div>
+
+				<div clas="col-lg-3 col-md-6 footer-links">
+					<h4>푸터제목3</h4>
+					<ul>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터3Home</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터3AboutUs</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터3Services</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터3TermsOfService</a></li>
+						<li><i class="bx bx-chevron-right"></i><a href="#">푸터3PrivacyPolicy</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-4 col-md-6 footer-newsletter">
+					<h4>푸터제목4</h4>
+					<p>푸터paragraph444444444</p>
+					<form action="" method="post">
+						<input type="email" name="email">
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container d-md-flex py-4">
+
+			<div class="me-md-auto text-center text-md-start">
+				<div class="copyright">
+					&copy; Copyright <strong><span>코피라이트</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+         			<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+         			Designed by <a href="https://boostrapmade.com/">BootstrapMade</a>
+				</div>
+			</div>
+			<div class="social-links text-center text-md-right pt-3 pt-md-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div>
+		</div>
+
+	</footer>
+	<!-- ========= End Footer Section ========= -->
+
+  	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+</body>
+</html>
